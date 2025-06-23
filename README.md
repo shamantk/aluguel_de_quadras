@@ -15,9 +15,18 @@ Este backend foi desenvolvido em **Node.js**, com banco de dados em **MySQL**, u
 - 💳 Pagamento de reservas
 - 🕓 Histórico de reservas
 
+## 🔗 API Centralizadora
+
+Como parte do desafio do projeto, desenvolvemos também uma API centralizadora. Ela tem como função organizar e concentrar todas as funcionalidades principais do sistema em um único ponto de entrada para o frontend. Isso inclui as operações de cadastro, autenticação, consulta de quadras, gerenciamento de reservas, pagamentos e avaliações.
+
+Com essa abordagem, garantimos uma estrutura mais organizada e escalável, além de facilitar a manutenção futura. A API centralizadora também padroniza o acesso às rotas, ajudando a separar melhor as responsabilidades dentro do código e mantendo o backend mais limpo e coeso.
+
+Toda a comunicação entre o frontend e o backend é feita por meio dessa camada centralizada, garantindo consistência e segurança no acesso aos dados.
+
 ---
 
-Como subir a aplicação (passo a passo)
+## Como subir a aplicação (passo a passo)
+
 O backend do nosso projeto "Aluguel de Quadras" foi desenvolvido em Node.js, com banco de dados MySQL. Abaixo explicamos como executar a aplicação localmente e como realizamos os testes.
 
 Clonando o repositório:
