@@ -2,7 +2,7 @@
 
 Este repositório contém o backend do sistema **Aluguel de Quadras**, um projeto acadêmico que permite aos usuários realizarem reservas de quadras esportivas, com funcionalidades como cadastro, consulta, avaliações e controle de pagamentos.
 
-Este backend foi desenvolvido em **Node.js**, com banco de dados em **MySQL**, utilizando variáveis de ambiente com `.env`.
+Este backend foi desenvolvido em **Node.js** com **Express**, utilizando banco de dados **MySQL** e variáveis de ambiente com `.env`.
 
 ---
 
