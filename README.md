@@ -17,10 +17,62 @@ Este backend foi desenvolvido em **Node.js**, com banco de dados em **MySQL**, u
 
 ---
 
-## 🚀 Como subir a aplicação (Passo a passo)
+Como subir a aplicação (passo a passo)
+O backend do nosso projeto "Aluguel de Quadras" foi desenvolvido em Node.js, com banco de dados MySQL. Abaixo explicamos como executar a aplicação localmente e como realizamos os testes.
 
-### 1. Clone o repositório
+Clonando o repositório:
+Para começar, clonamos o repositório do backend do nosso grupo a partir do GitHub. Utilizamos o seguinte link:
+https://github.com/shamantk/aluguel_de_quadras
+Após o clone, acessamos a pasta do projeto com o comando cd aluguel_de_quadras no terminal.
 
-```bash
-git clone https://github.com/shamantk/aluguel_de_quadras.git
-cd aluguel_de_quadras
+Instalação das dependências:
+Dentro da pasta do projeto, rodamos o comando npm install para instalar todas as dependências necessárias, como Express, MySQL, JWT, Bcrypt, dotenv e outras utilizadas ao longo do backend.
+
+Configuração do banco de dados:
+Criamos o banco de dados no MySQL Workbench com o nome aluguel_quadras. Após isso, executamos os scripts SQL responsáveis pela criação das tabelas, relacionamentos e constraints. Garantimos que o banco estivesse funcionando corretamente antes de iniciar a aplicação.
+
+Criação do arquivo .env:
+Criamos um arquivo .env na raiz do projeto contendo as variáveis de ambiente com os dados de conexão do banco de dados e outras configurações importantes. O conteúdo do nosso .env ficou assim (com os dados adaptados à nossa máquina local):
+
+ini
+Copiar
+Editar
+PORT=3000
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=123456
+DB_NAME=aluguel_quadras
+JWT_SECRET=chave_secreta_do_grupo
+Execução da aplicação:
+Com tudo configurado, executamos a aplicação com o comando npm run dev. A aplicação iniciou corretamente na porta 3000, e ficou acessível em http://localhost:3000.
+
+Testes das rotas:
+Para testar a API desenvolvida, utilizamos o Insomnia, que nos permitiu simular requisições HTTP e validar o comportamento das rotas. Durante os testes, criamos usuários, fizemos login, reservas, pagamentos e também verificamos o retorno dos históricos de reserva e avaliações.
+
+Abaixo estão as principais rotas que implementamos e testamos:
+
+POST /usuarios – cadastro de usuários
+
+GET /usuarios – consulta de usuários
+
+POST /login – autenticação com retorno de token JWT
+
+GET /quadras – consulta de quadras
+
+GET /quadras/filtro – filtro de quadras por tipo ou localização
+
+POST /reserva – criação de reserva
+
+PUT /reserva/:id – atualização de reserva
+
+DELETE /reserva/:id – cancelamento de reserva
+
+GET /reserva/:idUsuario – consulta de reservas do usuário
+
+GET /reserva/historico/:idUsuario – histórico de reservas
+
+POST /avaliacao – envio de avaliação
+
+POST /pagamento – pagamento de reserva
+
+Com esse processo, conseguimos rodar e testar toda a aplicação backend localmente de forma estável, garantindo que todas as rotas estivessem funcionando corretamente.
